@@ -1,0 +1,25 @@
+﻿<Window x:Class="tp01_cSharp.Acceuil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tp01_cSharp"
+        mc:Ignorable="d"
+        Title="Acceuil" Height="450" Width="800" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF2284B7" Offset="0.518"/>
+                <GradientStop Color="White"/>
+                <GradientStop Color="#FF082765" Offset="0.963"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label x:Name="titre_acceuil" Content="Connexion" HorizontalAlignment="Left" Margin="302,64,0,0" VerticalAlignment="Top" FontSize="32" FontWeight="ExtraBold" Foreground="#FF0A0849" FontFamily="Cooper Black"/>
+        <Label x:Name="lb_username" Content="Nom d'utilisateur : " HorizontalAlignment="Left" Margin="197,176,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="lb_mp" Content="Mot de passe : " HorizontalAlignment="Left" Margin="232,231,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="tb_nom" HorizontalAlignment="Left" Height="34" Margin="393,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="18"/>
+        <PasswordBox x:Name="tb_mp" HorizontalAlignment="Left"  Height="34" Width="179" Margin="393,231,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Button x:Name="btn_connexion" Content="Connexion" HorizontalAlignment="Left" VerticalAlignment="Top" Width="184" Margin="302,315,0,0" Background="#FF9D9FAD" BorderBrush="#FF040A32" Foreground="#FF0A0849" Height="29" FontSize="14" FontWeight="ExtraBold" Click="btn_connexion_Click"/>
+
+    </Grid>
+</Window>

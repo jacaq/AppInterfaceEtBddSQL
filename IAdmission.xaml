@@ -1,0 +1,45 @@
+﻿<Window x:Class="tp01_cSharp.IAdmission"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tp01_cSharp"
+        mc:Ignorable="d"
+        Title="IAdmission" Height="450" Width="800" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label x:Name="lb_titre_admission" Content="Faire une admission" HorizontalAlignment="Left" Margin="256,32,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="lb_date_admission" Content="Date admission" HorizontalAlignment="Left" Margin="84,234,0,0" VerticalAlignment="Top"/>
+        <Grid x:Name="gridRadio" HorizontalAlignment="Left" Height="48" Margin="84,186,0,0" VerticalAlignment="Top" Width="262">
+            <RadioButton x:Name="radio_oui" Content="OUI" HorizontalAlignment="Left" Margin="138,16,0,0" VerticalAlignment="Top"/>
+            <RadioButton x:Name="radio_non" Content="NON" HorizontalAlignment="Left" Margin="198,16,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lb_chirurgie_prog1" Content="Chirurgie programmé : " HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <DatePicker x:Name="datePicker_admission" HorizontalAlignment="Left" Margin="179,234,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <Label x:Name="lb_date_chirurgie" Content="Date chirurgie" HorizontalAlignment="Left" Margin="84,262,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="datePicker_chirurgie" HorizontalAlignment="Left" Margin="179,262,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkbox_TV" Content="Service Téléviseur" HorizontalAlignment="Left" Margin="470,143,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkbox_telephone" Content="Service Téléphone" HorizontalAlignment="Left" Margin="470,172,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lb_info_NAS" Content="Nas:" HorizontalAlignment="Left" Margin="84,148,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.938,2.407"/>
+        <Label x:Name="lb_info_IDMedecin" Content="ID médecin: " HorizontalAlignment="Left" Margin="470,216,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.585,1.696"/>
+        <Label x:Name="lb_titre_services" Content="Sélection des services" HorizontalAlignment="Left" Margin="470,112,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lb_titre_remplirInfo" Content="Remplir ces informations" HorizontalAlignment="Left" Margin="84,112,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="btn_confirmerAdmission" Content="Confirmer admission" HorizontalAlignment="Left" Margin="256,326,0,0" VerticalAlignment="Top" Width="278" Height="26" Click="btn_confirmerAdmission_Click"/>
+        <Button x:Name="btn_confirmerAdmission_Copy" Content="Confirmer admission" HorizontalAlignment="Left" Margin="256,326,0,0" VerticalAlignment="Top" Width="278" Height="26" Click="btn_confirmerAdmission_Click"/>
+        <Button x:Name="btn_retour" Content="Retour à la page précédante" HorizontalAlignment="Left" Margin="256,373,0,0" VerticalAlignment="Top" Width="278" Height="21" Click="btn_retour_Click"/>
+        <TextBox x:Name="tb_nas" HorizontalAlignment="Left" Height="23" Margin="144,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
+        <TextBox x:Name="tb_idMED" HorizontalAlignment="Left" Height="23" Margin="571,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lb_info_IDdept" Content="ID département:" HorizontalAlignment="Left" Margin="470,247,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.585,1.696"/>
+        <ComboBox x:Name="comboBox_iddept" HorizontalAlignment="Left" Margin="571,247,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="pediatrie"/>
+            <ComboBoxItem Content="Urgence"/>
+            <ComboBoxItem Content="Soins intensif"/>
+        </ComboBox>
+        <Label x:Name="lb_info_typeChambre" Content="Type chambre:" HorizontalAlignment="Left" Margin="470,278,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.585,1.696"/>
+        <ComboBox x:Name="comboBox_type_chambre" HorizontalAlignment="Left" Margin="571,278,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Privée"/>
+            <ComboBoxItem Content="Semi_privée"/>
+            <ComboBoxItem Content="Standart"/>
+        </ComboBox>
+
+    </Grid>
+</Window>

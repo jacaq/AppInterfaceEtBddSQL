@@ -1,0 +1,50 @@
+﻿<Window x:Class="tp01_cSharp.IRecherchePatient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tp01_cSharp"
+        mc:Ignorable="d"
+        Title="IRecherchePatient" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF6F7379" Offset="1"/>
+                <GradientStop Color="#FF1467E0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid x:Name="DataGrid_listePatient" HorizontalAlignment="Left" Height="197" Margin="3,60,0,0" VerticalAlignment="Top" Width="788" RenderTransformOrigin="0.5,0.5" AutoGenerateColumns="False" ItemsSource="{Binding}" Background="#FF679FB4" >
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.166"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="NAS" Binding="{Binding NAS}" />
+                <DataGridTextColumn Header="Prénom" Binding="{Binding Prenom}" />
+                <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" />
+
+                <DataGridTextColumn Header="Adresse" Binding="{Binding Adresse_civique}" />
+                <DataGridTextColumn Header="App" Binding="{Binding App}" />
+                <DataGridTextColumn Header="Ville" Binding="{Binding Ville}" />
+                <DataGridTextColumn Header="Province" Binding="{Binding Province}" />
+                <DataGridTextColumn Header="Code postal" Binding="{Binding Code_postal}" />
+                <DataGridTextColumn Header="Tel" Binding="{Binding Telephone}" />
+                <DataGridTextColumn Header="Date nais." Binding="{Binding Date_naissance}" />
+                <DataGridTextColumn Header="Id ass." Binding="{Binding IDAssurance}" />
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="tb_nas_patient" HorizontalAlignment="Left" Height="23" Margin="55,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287" RenderTransformOrigin="0.236,0.226"/>
+        <Label x:Name="lb_nas_patient" Content="Nas patient" HorizontalAlignment="Left" Margin="52,278,0,0" VerticalAlignment="Top"/>
+
+        <Button x:Name="btn_rechercher_patient" Content="Rechercher patient" HorizontalAlignment="Left" Margin="52,348,0,0" VerticalAlignment="Top" Width="325" Height="21" Click="btn_rechercher_patient_Click"/>
+        <Label x:Name="lb_titre_recherche" Content="Recherche d'un patient" HorizontalAlignment="Left" Margin="207,10,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold"/>
+        <Button x:Name="btn_retour" Content="Retour page précédante" HorizontalAlignment="Left" Margin="404,348,0,0" VerticalAlignment="Top" Width="325" Height="21" Click="btn_retour_Click"/>
+    </Grid>
+</Window>
